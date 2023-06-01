@@ -1,11 +1,25 @@
-# Tectonic template for Visual Studio Code with a Dev Container
+# IPA/PA Checkliste Kanton Zug
 
-This is an opinionated template to give you a kick start into writing a LaTeX document with Tectonic and Visual Studio Code. It includes batteries:
+Dieses Latex Template kann gebraucht werden für die Checkliste zur Durchführung einer PA (Praktische Abschlussarbeit) für Informatiker EFZ im Kanton Zug und basiert auf dem bisherigen Template der Checkliste. Wichtig: Diese Checkliste ist nicht verbindlich und dient nur zur Unterstützung der Experten. 
 
-- Preconfigured KOMAScript `scrreprt` document class
-- Github Actions with [setup-tectonic](https://github.com/WtfJoke/setup-tectonic) action
+## Dokument bearbeiten
 
-## Getting started
+ 1. Repository klonen
+ 1. In Visual Studio Code öffen, die Extension [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) sollte vorher installiert werden, ebenso wie Docker.
+ 1. DEV Container starten, Output-PDF-Dokument wird automatisch via on-save aktualisert.
 
- 1. Clone this repository
- 1. Open it in Visual Studio Code while having [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) installed and Docker running
+
+## Dokument builden ohne Entwicklungsumgebung
+
+Das Dokument kann mit LaTeX gebaut werden, die besten Resultate gibt es mit der Tectonic Latex Umgebung. Wenn Tectonic installiert ist, kann folgender Befehl ausgeführt werden:
+
+```
+tectonic -X build
+```
+
+Das fertige Dokument befindet sich dann unter build/default/default.pdf.
+
+
+## Credits
+
+Dieses Dokument basiert auf der IPA Checkliste von Open ICT: https://github.com/ictorg/ipa-experts-checklist

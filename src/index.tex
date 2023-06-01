@@ -2,18 +2,18 @@
 % define document class
 \documentclass{scrreprt}
 
-% apply pk package
-\usepackage{../lib/pk}
+% apply style package
+\usepackage{./style}
 
 % set variables
-\newcommand{\varAuthor}{Robin Bühler}
-\newcommand{\varCompany}{} % Firmenname
-\newcommand{\varTitle}{Expertencheckliste: Durchführung einer IPA als Hauptexperte}
-\newcommand{\varVersion}{Version 2023.2}
+\newcommand{\varAuthor}{Jan Bucher}
+\newcommand{\varCompany}{Amt für Berufsbildung Kanton Zug}
+\newcommand{\varTitle}{Checkliste PA Informatik Kanton Zug}
+\newcommand{\varVersion}{Version 2023.1}
 
 % footer and headings
 \rohead[\varTitle]{\varTitle}
-\lofoot[\today]{\today}
+\lofoot[\varCompany]{\varCompany}
 \cfoot[\varAuthor\\Version \varVersion]{\varVersion}
 \rofoot[Seite \pagemark{} von \pageref{LastPage}]{Seite \pagemark{} von \pageref{LastPage}}
 
@@ -21,19 +21,15 @@
 \begin{document}
 \begin{Form}
   \chapter*{\varTitle}
-  Bei geschlechterspezifischen Personenbezeichnungen sind immer alle Geschlechter gemeint.\\
-  \\
-  \sbox\TBox{Kandidat: }\TextField[charsize=10pt, width=\dimexpr\linewidth-\wd\TBox]{Kandidat:}
-  \sbox\TBox{Arbeitstitel: }\TextField[charsize=10pt, width=\dimexpr\linewidth-\wd\TBox]{Arbeitstitel:}
-  \sbox\TBox{Hauptexperte: }\TextField[charsize=10pt, width=\dimexpr\linewidth-\wd\TBox]{Hauptexperte:}
-  \input{sections/1_preparation}
-  \input{sections/2_before-start}
-  \input{sections/3_first-visit}
-  \input{sections/4_second-visit}
-  \input{sections/5_interruptions}
-  \input{sections/6_before-presentation}
-  \input{sections/7_presentation}
-  \input{sections/8_assessment}
-  \input{sections/9_submit}
+
+  \sbox\TBox{Titel der PA: }\TextField[charsize=10pt, width=\dimexpr\linewidth-\wd\TBox]{Arbeitstitel:}\\
+  \sbox\TBox{Kandidat: }\TextField[charsize=10pt, width=\dimexpr\linewidth-\wd\TBox]{Kandidat:}\\
+  \sbox\TBox{Lehrbetrieb: }\TextField[charsize=10pt, width=\dimexpr\linewidth-\wd\TBox]{Lehrbetrieb:}\\
+  \sbox\TBox{Hauptexperte: }\TextField[charsize=10pt, width=\dimexpr\linewidth-\wd\TBox]{Hauptexperte:}\\
+
+  \input{sections/1_before-start}
+  \input{sections/2_expert-visit}
+  \input{sections/3_presentation}
+  \input{sections/4_after-presentation}
 \end{Form}
 \end{document}
